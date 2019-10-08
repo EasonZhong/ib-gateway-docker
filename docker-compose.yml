@@ -3,13 +3,13 @@ services:
   tws:
     build: .
     ports:
-      - "4003:4003"
-      - "5901:5900"
+      - "127.0.0.1:4003:4003"
+      - "127.0.0.1:5901:5900"
     volumes:
       - ./ib/IBController.ini:/root/IBController/IBController.ini
       - ./ib/jts.ini:/root/Jts/jts.ini
     environment:
-      - TZ=America/Chicago
+      - TZ=Asia/Chongqing
       # Variables pulled from /IBController/IBControllerGatewayStart.sh
       - VNC_PASSWORD=1234 # CHANGEME
       - TWS_MAJOR_VRSN=974
